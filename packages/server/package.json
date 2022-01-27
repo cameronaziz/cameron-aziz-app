@@ -1,0 +1,20 @@
+{
+    "name": "@cameron-aziz/server",
+    "version": "1.0.0",
+    "description": "Cameron Aziz Server",
+    "main": "keystone.ts",
+    "scripts": {
+        "dev": "keystone dev",
+        "start": "keystone start",
+        "build": "keystone build && keystone prisma migrate deploy"
+    },
+    "author": "Cameron Aziz",
+    "license": "MIT",
+    "dependencies": {
+        "@keystone-6/auth": "^1.0.2",
+        "@keystone-6/core": "^1.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.5"
+    }
+}

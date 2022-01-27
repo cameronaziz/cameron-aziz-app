@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/caziz/code/personal/cameron-aziz/app/routes/blog/$slug.tsx?browser", "../../../../app/routes/blog/$slug.tsx"],
+  "sourcesContent": ["export { default } from \"/Users/caziz/code/personal/cameron-aziz/app/routes/blog/$slug.tsx\";", "import React, { VFC } from 'react';\n\ninterface SlugProps {\n}\n\nconst Slug: VFC<SlugProps> = (props) => {\n  const { } = props;\n\n  return (\n    <div>post</div>\n  );\n};\n\nexport default Slug;\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAA2B;AAK3B,IAAM,OAAuB,CAAC,UAAU;AACtC,QAAM,KAAM;AAEZ,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,eAAQ;",
+  "names": []
+}

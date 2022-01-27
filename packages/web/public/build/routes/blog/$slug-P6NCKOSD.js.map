@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Users/caziz/code/personal/cameron-aziz/app/routes/blog/$slug.tsx?browser", "../../../../app/routes/blog/$slug.tsx"],
+  "sourcesContent": ["export { default, meta } from \"/Users/caziz/code/personal/cameron-aziz/app/routes/blog/$slug.tsx\";", "import { VFC } from 'react';\nimport { MetaFunction } from 'remix';\n\ninterface SlugProps {\n}\n\nconst Slug: VFC<SlugProps> = (props) => {\n  console.log(props)\n  const { } = props;\n\n  return (\n    <div>post</div>\n  );\n};\n\nexport const meta: MetaFunction = () => ({\n  title: 'Post',\n});\n\nexport default Slug;\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAMA,IAAM,OAAuB,CAAC,UAAU;AACtC,UAAQ,IAAI;AACZ,QAAM,KAAM;AAEZ,SACE,oCAAC,OAAD,MAAK;AAAA;AAIF,IAAM,OAAqB,MAAO;AAAA,EACvC,OAAO;AAAA;AAGT,IAAO,eAAQ;",
+  "names": []
+}

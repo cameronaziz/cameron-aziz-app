@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@cameron-aziz/root",
+  "version": "1.0.0",
+  "description": "Cameron Aziz Root",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameronaziz/cameron-aziz.git"
+  },
+  "author": "Cameron Aziz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cameronaziz/cameron-aziz/issues"
+  },
+  "homepage": "https://github.com/cameronaziz/cameron-aziz#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}
