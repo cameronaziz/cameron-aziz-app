@@ -29,7 +29,7 @@ input PostWhereInput {
   slug: StringFilter
   content: StringFilter
   isHighlighted: BooleanFilter
-  postDate: DateTimeNullableFilter
+  postDate: DateTimeFilter
   imageSource: ImageWhereInput
 }
 
@@ -83,7 +83,7 @@ input BooleanFilter {
   not: BooleanFilter
 }
 
-input DateTimeNullableFilter {
+input DateTimeFilter {
   equals: DateTime
   in: [DateTime!]
   notIn: [DateTime!]
@@ -91,7 +91,7 @@ input DateTimeNullableFilter {
   lte: DateTime
   gt: DateTime
   gte: DateTime
-  not: DateTimeNullableFilter
+  not: DateTimeFilter
 }
 
 input PostOrderByInput {
@@ -253,11 +253,6 @@ input PersonWhereInput {
   id: IDFilter
   name: StringFilter
   email: StringFilter
-  password: PasswordFilter
-}
-
-input PasswordFilter {
-  isSet: Boolean!
 }
 
 input PersonOrderByInput {

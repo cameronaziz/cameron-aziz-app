@@ -12,15 +12,15 @@ generator client {
 }
 
 model Post {
-  id            String    @id @default(cuid())
-  title         String    @default("")
-  summary       String    @default("")
-  slug          String    @default("")
-  content       String    @default("")
-  isHighlighted Boolean   @default(false)
-  postDate      DateTime?
-  imageSource   Image?    @relation("Post_imageSource", fields: [imageSourceId], references: [id])
-  imageSourceId String?   @map("imageSource")
+  id            String   @id @default(cuid())
+  title         String   @default("")
+  summary       String   @default("")
+  slug          String   @default("")
+  content       String   @default("")
+  isHighlighted Boolean  @default(false)
+  postDate      DateTime
+  imageSource   Image?   @relation("Post_imageSource", fields: [imageSourceId], references: [id])
+  imageSourceId String?  @map("imageSource")
 
   @@index([imageSourceId])
 }
@@ -38,8 +38,8 @@ model Image {
 }
 
 model Person {
-  id       String  @id @default(cuid())
-  name     String  @default("")
-  email    String  @unique @default("")
-  password String?
+  id       String @id @default(cuid())
+  name     String @default("")
+  email    String @unique @default("")
+  password String
 }
