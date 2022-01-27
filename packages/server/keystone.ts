@@ -45,6 +45,13 @@ export default withAuth(
     },
     server: { port: PORT },
     lists,
+    images: {
+      upload: 'local',
+      local: {
+        storagePath: 'public/images',
+        baseUrl: '/images',
+      },
+    },
     // We add our session configuration to the system here.
     session,
   })

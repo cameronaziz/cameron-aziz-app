@@ -1,6 +1,6 @@
 import { VFC } from 'react';
 import { LoaderFunction, MetaFunction, useLoaderData } from 'remix';
-import useBlogPost from '~/hooks/useBlogPost';
+import useBlogPost from '../../hooks/useBlogPost';
 
 export const loader: LoaderFunction = (data) => {
   return data.params.slug;

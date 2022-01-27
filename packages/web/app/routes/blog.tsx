@@ -1,8 +1,8 @@
 import { useEffect, VFC } from 'react';
 import { MetaFunction, Outlet } from 'remix';
-import BlogHighlight from '~/components/blog/highlight';
-import BlogSummary from '~/components/blog/summary';
-import useBlogPosts from '~/hooks/useBlogPosts';
+import BlogHighlight from '../components/blog/highlight';
+import BlogSummary from '../components/blog/summary';
+import useBlogPosts from '../hooks/useBlogPosts';
 
 const defaultPosts: Blog.PostSummary[] = [
   {

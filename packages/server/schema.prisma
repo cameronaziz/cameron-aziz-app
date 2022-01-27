@@ -11,16 +11,30 @@ generator client {
   output   = "node_modules/.prisma/client"
 }
 
-model Task {
-  id           String    @id @default(cuid())
-  label        String    @default("")
-  priority     String?
-  isComplete   Boolean   @default(false)
-  assignedTo   Person?   @relation("Task_assignedTo", fields: [assignedToId], references: [id])
-  assignedToId String?   @map("assignedTo")
-  finishBy     DateTime?
+model Post {
+  id            String    @id @default(cuid())
+  title         String    @default("")
+  summary       String    @default("")
+  slug          String    @default("")
+  content       String    @default("")
+  isHighlighted Boolean   @default(false)
+  postDate      DateTime?
+  imageSource   Image?    @relation("Post_imageSource", fields: [imageSourceId], references: [id])
+  imageSourceId String?   @map("imageSource")
 
-  @@index([assignedToId])
+  @@index([imageSourceId])
+}
+
+model Image {
+  id                    String  @id @default(cuid())
+  title                 String  @default("")
+  imageSource_filesize  Int?
+  imageSource_extension String?
+  imageSource_width     Int?
+  imageSource_height    Int?
+  imageSource_mode      String?
+  imageSource_id        String?
+  from_Post_imageSource Post[]  @relation("Post_imageSource")
 }
 
 model Person {
@@ -28,5 +42,4 @@ model Person {
   name     String  @default("")
   email    String  @unique @default("")
   password String?
-  tasks    Task[]  @relation("Task_assignedTo")
 }

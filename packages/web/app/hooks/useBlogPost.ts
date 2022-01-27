@@ -1,7 +1,7 @@
 import { useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
-import { isFullPost } from '~/guards';
 import blog from '../atoms/blog';
+import { isFullPost } from '../guards';
 
 const useBlogPost: Hooks.UseBlogPost = (slug) => {
   const [blogState, setBlogState] = useAtom(blog);
